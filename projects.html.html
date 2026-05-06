@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Required: Set metadata of the document -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Projects page for student portfolio website">
+   <meta name="author" content="Your Name">
+   <title>Projects | Student Portfolio</title>
+
+   <!-- Required: Link to CSS file(s) -->
+   <link rel="stylesheet" href="format.css">
+   <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+   <header>
+      <div class="site-title">
+         <h1>My Projects</h1>
+         <p><strong>Examples</strong> of my class work and creative ideas</p>
+      </div>
+
+      <!-- Required: Include navigation list with hypertext links -->
+      <nav>
+         <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <section class="page-banner">
+         <h2>Featured Work</h2>
+         <p>These sample projects show my progress with web design, layout, and styling.</p>
+      </section>
+
+      <!-- Required: Create a grid layout -->
+      <section class="project-grid">
+         <article class="card">
+            <!-- Required: Include inline images -->
+            <img src="https://picsum.photos/350/200?random=12" alt="Project 1 placeholder image">
+            <h3>Project One</h3>
+            <p>A simple website design focused on readable content and a clean layout.</p>
+            <a href="index.html" class="button-link">Preview Style</a>
+         </article>
+
+         <article class="card">
+            <img src="https://picsum.photos/350/200?random=15" alt="Project 2 placeholder image">
+            <h3>Project Two</h3>
+            <p>A page layout using floating elements, spacing, and a balanced color palette.</p>
+            <a href="about.html" class="button-link">See Layout</a>
+         </article>
+
+         <article class="card">
+            <img src="https://picsum.photos/350/200?random=18" alt="Project 3 placeholder image">
+            <h3>Project Three</h3>
+            <p>A responsive design example with flexible sections for desktop and mobile screens.</p>
+            <a href="projects.html" class="button-link">Current Page</a>
+         </article>
+      </section>
+
+      <section class="resources">
+         <h2>Useful Resources</h2>
+
+         <!-- Required: Include hypertext links -->
+         <!-- Required later in CSS: Use contextual/attribute selectors -->
+         <p>
+            I used class materials and practice exercises to build this project. I also plan to keep improving my coding
+            skills through <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> and
+            <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.
+         </p>
+      </section>
+
+      <!-- Optional: Include a pulldown menu -->
+      <section class="contact-form-section">
+         <h2>Project Interest Form</h2>
+         <form class="contact-form" action="#" method="get">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="topic">Favorite Section:</label>
+            <select id="topic" name="topic">
+               <option value="home">Home</option>
+               <option value="about">About Me</option>
+               <option value="projects">Projects</option>
+            </select>
+
+            <input type="submit" value="Submit">
+         </form>
+      </section>
+   </main>
+
+   <footer>
+      <p>Thanks for visiting my portfolio site! &copy; 2026</p>
+   </footer>
+</body>
+</html>

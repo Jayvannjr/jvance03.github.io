@@ -1,0 +1,228 @@
+/* =======================================================
+   Required: CSS file for formatting
+   Covers Tutorial 2 requirements:
+   - Format lists, background, and text
+   - Use pseudo classes/elements
+   - Use contextual/attribute selectors
+   - Use pseudo classes for hypertext links
+======================================================= */
+
+/* Required: Format background and text */
+body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   background: linear-gradient(to bottom, #f4f7fb, #dfe9f3);
+   color: #1f2d3d;
+   line-height: 1.6;
+}
+
+/* Grouping/text formatting */
+h1, h2, h3 {
+   font-family: Georgia, "Times New Roman", serif;
+   color: #102a43;
+}
+
+p {
+   font-size: 1rem;
+}
+
+header, footer {
+   background-color: #1f3c88;
+   color: white;
+}
+
+footer p {
+   margin: 0;
+   text-align: center;
+   padding: 15px;
+}
+
+.site-title {
+   padding: 20px;
+   text-align: center;
+}
+
+.page-banner {
+   background-color: #ffffffcc;
+   border-left: 6px solid #4f8cff;
+   padding: 20px;
+   margin: 20px;
+   border-radius: 10px;
+}
+
+.highlight {
+   color: #0b6e4f;
+   font-weight: bold;
+}
+
+mark {
+   background-color: #ffe08a;
+   padding: 2px 6px;
+   border-radius: 4px;
+}
+
+/* Required: Format lists */
+.nav-list,
+.feature-list,
+.goals-list {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.feature-list li,
+.goals-list li {
+   background-color: #ffffff;
+   margin: 10px 0;
+   padding: 10px;
+   border-left: 4px solid #4f8cff;
+   border-radius: 6px;
+}
+
+.goals-list {
+   list-style-type: decimal;
+   list-style-position: inside;
+}
+
+.goals-list li {
+   background-color: #eef4ff;
+}
+
+/* Navigation appearance */
+.nav-list li {
+   display: inline-block;
+   margin: 0 10px;
+}
+
+/* Required: Use pseudo classes for hypertext links */
+nav a:link {
+   color: #ffffff;
+   text-decoration: none;
+}
+
+nav a:visited {
+   color: #d6e4ff;
+}
+
+nav a:hover {
+   color: #ffe08a;
+   text-decoration: underline;
+}
+
+nav a:active {
+   color: #ffb703;
+}
+
+nav a:focus {
+   outline: 2px dashed #ffffff;
+   outline-offset: 4px;
+}
+
+/* Button links */
+.button-link:link,
+.button-link:visited {
+   display: inline-block;
+   background-color: #1f3c88;
+   color: white;
+   padding: 10px 16px;
+   border-radius: 6px;
+   text-decoration: none;
+   margin-top: 10px;
+}
+
+.button-link:hover,
+.button-link:focus {
+   background-color: #4f8cff;
+}
+
+.button-link:active {
+   background-color: #163172;
+}
+
+/* Required: Use pseudo classes/elements */
+.card:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card h3::first-letter {
+   font-size: 1.4em;
+   color: #0b6e4f;
+}
+
+.hero-text p::first-line {
+   font-weight: bold;
+}
+
+.feature-list li::before {
+   content: "✔ ";
+   color: #0b6e4f;
+   font-weight: bold;
+}
+
+/* Required: Use contextual selector */
+section p a {
+   color: #0b6e4f;
+   font-weight: bold;
+}
+
+section p a:hover {
+   color: #c1121f;
+}
+
+/* Required: Use attribute selector */
+a[target="_blank"] {
+   background-color: #eef7ee;
+   padding: 2px 6px;
+   border-radius: 4px;
+}
+
+/* Form formatting */
+.contact-form label {
+   font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select {
+   padding: 10px;
+   border: 1px solid #aab7c4;
+   border-radius: 6px;
+   font-size: 1rem;
+}
+
+.contact-form input[type="submit"] {
+   background-color: #0b6e4f;
+   color: white;
+   border: none;
+   cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+   background-color: #09543d;
+}
+
+/* Image styling */
+img {
+   max-width: 100%;
+   border-radius: 10px;
+}
+
+/* Card appearance */
+.card,
+.content-box,
+.overflow-box,
+.fact-box {
+   background-color: rgba(255, 255, 255, 0.92);
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+   padding: 20px;
+}
+
+/* Fun badge */
+.badge {
+   background-color: #ffb703;
+   color: #1f2d3d;
+   font-weight: bold;
+   padding: 8px 12px;
+   border-radius: 20px;
+}

@@ -1,0 +1,191 @@
+/* =======================================================
+   Required: CSS file for layout
+   Covers Tutorial 3 and Tutorial 5 requirements:
+   - Use both block and floating elements
+   - Create a floated layout
+   - Create a grid layout
+   - Experiment with relative and absolute positioning
+   - Handle overflow
+   - Implement responsive design with @media and flex/flexbox
+======================================================= */
+
+/* Basic block layout */
+header,
+main,
+section,
+article,
+aside,
+footer,
+nav {
+   display: block;
+}
+
+/* Navigation layout */
+nav {
+   background-color: #163172;
+   padding: 12px;
+   text-align: center;
+}
+
+/* Required: Use flex/flexbox */
+.hero {
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   justify-content: space-between;
+   padding: 30px;
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+.hero-text,
+.hero-image {
+   flex: 1;
+}
+
+/* Required: Create a floated layout */
+.float-left {
+   float: left;
+   margin: 0 20px 10px 0;
+   width: 220px;
+}
+
+/* Clear fix for floated layout */
+.clearfix::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.intro,
+.highlights,
+.skills-grid-section,
+.resources,
+.contact-form-section,
+.position-section,
+.overflow-section {
+   max-width: 1100px;
+   margin: 20px auto;
+   padding: 20px;
+}
+
+/* Required: Create a grid layout */
+.skills-grid,
+.project-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+}
+
+.project-grid {
+   max-width: 1100px;
+   margin: 20px auto;
+   padding: 20px;
+}
+
+.card img {
+   width: 100%;
+   height: auto;
+   display: block;
+   margin-bottom: 12px;
+}
+
+/* Two-column flex layout */
+.two-column-flex {
+   display: flex;
+   gap: 20px;
+   max-width: 1100px;
+   margin: 20px auto;
+   padding: 20px;
+}
+
+.content-box {
+   flex: 1;
+}
+
+.about-image {
+   display: block;
+   margin-bottom: 15px;
+}
+
+/* Required: Experiment with relative and absolute positioning */
+.fact-box {
+   position: relative;
+   max-width: 700px;
+   margin: 0 auto;
+   min-height: 100px;
+}
+
+.badge {
+   position: absolute;
+   top: -12px;
+   right: -12px;
+}
+
+/* Required: Handle overflow */
+.overflow-box {
+   max-width: 700px;
+   height: 140px;
+   overflow: auto;
+   margin: 0 auto;
+}
+
+/* Form layout */
+.contact-form {
+   max-width: 700px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+/* Footer spacing */
+footer {
+   margin-top: 30px;
+}
+
+/* Required: Implement responsive design to different screen widths using @media and flex/flexbox */
+@media screen and (max-width: 900px) {
+   .hero,
+   .two-column-flex {
+      flex-direction: column;
+   }
+
+   .skills-grid,
+   .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .nav-list li {
+      display: block;
+      margin: 10px 0;
+   }
+
+   .skills-grid,
+   .project-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .float-left {
+      float: none;
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 100%;
+      max-width: 250px;
+   }
+
+   .hero,
+   .intro,
+   .highlights,
+   .skills-grid-section,
+   .resources,
+   .contact-form-section,
+   .position-section,
+   .overflow-section,
+   .two-column-flex,
+   .project-grid {
+      padding: 15px;
+   }
+}
